@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Birthday.exe 🎂</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div id="particles"></div>
+
+  <main>
+    <section id="boot" class="screen active">
+      <div class="terminal-card">
+        <div class="terminal-top"><span></span><span></span><span></span><b>birthday.exe</b></div>
+        <div class="terminal-body">
+          <p class="green">Initializing Birthday.exe...</p>
+          <p>Loading memories... <span class="bar"><i></i></span> <strong>100%</strong></p>
+          <p>Compiling wishes... <span class="bar"><i></i></span> <strong>100%</strong></p>
+          <p>Preparing surprise... <span class="bar"><i></i></span> <strong>100%</strong></p>
+          <p class="success">✓ Birthday System Successfully Started!</p>
+          <button class="primary" onclick="showScreen('welcome')">Click to Continue →</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="welcome" class="screen">
+      <div class="hero-card">
+        <div class="hero-copy">
+          <span class="eyebrow">HEY BRO! 👋</span>
+          <h1>Happy Birthday! <span>🎉</span></h1>
+          <p>Today is all about you. Wishing you a year full of happiness, success and unlimited memories.</p>
+          <button class="primary" onclick="showScreen('memories')">Let's Begin 🚀</button>
+        </div>
+        <div class="polaroid">
+          <img src="assets/friends_day.jpg" alt="Birthday memory">
+          <small>One of many good memories ❤️</small>
+        </div>
+      </div>
+    </section>
+
+    <section id="memories" class="screen">
+      <div class="section-card">
+        <div class="section-title">
+          <span>MEMORY_DATABASE</span>
+          <h2>Loading Our Memories... 📸</h2>
+          <p>A timeline of crazy moments!</p>
+        </div>
+        <div class="timeline">
+          <div class="memory"><span class="year">THEN</span><img src="assets/childhood.jpg"><b>The Little Legend 😎</b></div>
+          <div class="memory"><span class="year">FRIENDS</span><img src="assets/friends_day.jpg"><b>Good Times, Better Friends ❤️</b></div>
+          <div class="memory"><span class="year">NIGHT</span><img src="assets/night_memory.jpg"><b>Late Nights, Big Dreams 🌙</b></div>
+        </div>
+        <div class="quote">💜 Thanks for being such an important part of my journey, bro! ❤️</div>
+        <button class="primary" onclick="showScreen('codewish')">Next →</button>
+      </div>
+    </section>
+
+    <section id="codewish" class="screen">
+      <div class="section-card">
+        <div class="section-title">
+          <span>BIRTHDAY_WISH_2.0</span>
+          <h2>A perfect code just for you 💻</h2>
+        </div>
+        <pre class="code"><span>if</span> (today === <em>"yourBirthday"</em>) {
+  happiness++;
+  success++;
+  goodHealth++;
+  money++;
+  problems = <b>0</b>;
+  dreams = <b>true</b>;
+  smile();
+
+  <i>// Have an amazing year ahead, bro! 🚀</i>
+}</pre>
+        <button class="primary" onclick="runSurprise()">Execute Surprise();</button>
+      </div>
+    </section>
+
+    <section id="final" class="screen">
+      <div class="final-card">
+        <p class="success">Friendship.exe successfully installed! ❤️</p>
+        <div class="ascii">HAPPY<br>BIRTHDAY!</div>
+        <h2>🎂 Stay Happy. Stay Blessed. 🎂</h2>
+        <p>Keep coding your dreams. Keep making memories.</p>
+        <p class="signature">— Your Bro ❤️</p>
+        <button class="secondary" onclick="showScreen('qr')">Create My QR Code</button>
+      </div>
+    </section>
+
+    <section id="qr" class="screen">
+      <div class="qr-card">
+        <span class="eyebrow">SHARE_THE_SURPRISE</span>
+        <h2>Scan the QR → Open the Birthday Surprise 🎁</h2>
+        <p>After deploying this site, paste the live URL below and generate the QR code.</p>
+        <input id="urlInput" type="url" placeholder="https://your-site.vercel.app" />
+        <button class="primary" onclick="makeQR()">Generate QR</button>
+        <div id="qrcode"></div>
+        <button class="secondary" onclick="window.print()">Print QR Card</button>
+      </div>
+    </section>
+  </main>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
